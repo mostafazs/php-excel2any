@@ -1,0 +1,30 @@
+{
+    "name": "mostafazs/php-excel2any",
+    "type": "library",
+    "description": "PHP Convert Excel to CSV",
+    "keywords": ["dev", "excel", "csv", "convert","converter"],
+    "homepage": "https://github.com/mostafazs/php-excel2any",
+    "version" "1.0.0",
+    "license": "MIT",
+    "readme": "./README.md",
+    "authors": [
+        {
+            "name": "Mostafa Ziasistani",
+            "email": "mostafas.dev@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "mostafas.dev@gmail.com",
+        "issues": "https://github.com/mostafazs/php-excel2any/issues"
+    },
+    "require": {
+        "php": ">=7.2.1",
+        "phpoffice/phpspreadsheet": "^1.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "excel2any\\": "src/"
+        }
+    }
+}
