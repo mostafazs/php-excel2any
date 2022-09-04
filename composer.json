@@ -4,7 +4,6 @@
     "description": "PHP Convert Excel to CSV",
     "keywords": ["dev", "excel", "csv", "convert","converter"],
     "homepage": "https://github.com/mostafazs/php-excel2any",
-    "version": "1.0.0",
     "license": "MIT",
     "readme": "./README.md",
     "authors": [
