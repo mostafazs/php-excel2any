@@ -1,3 +1,4 @@
+![License](https://img.shields.io/packagist/l/mostafazs/php-validator?style=plastic)
 # PHP Excel2Any
 Convert Excel to CSV
 
