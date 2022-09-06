@@ -6,9 +6,8 @@ Interface SaverInterface{
 
     /**
      * @param String $data
-     * @param String $format
      * @param String $filename
      * @return mixed
      */
-    public function save(String $data,String $format,String $filename);
+    public function save(String $data,String $filename);
 }

@@ -2,6 +2,7 @@
 namespace excel2any;
 
 
+use excel2any\Exception\InvalidArgumentException;
 use excel2any\Exception\RuntimeException;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -14,20 +15,12 @@ Class RealRead{
 
     public function Read()
     {
-        $default_config = [//@TODO improvement remove this
-            "startRow"=>1,
-            "endRow"=>2,
-            "inputFileType"=>"xlsx",
-            "inputFileName"=>"filename.xlsx",
-            "sheetname"=>"Sheet1",
-            "range_start"=>"A",
-            "range_end"=>"B",
-            "method"=>"1"
-        ];
         if(isset($this->config) == false){
             throw new RuntimeException("config argument missing");
         }
-
+        if(gettype($this->config) != "array"){
+            throw new InvalidArgumentException("Argument must be array");
+        }
         try {
             $filterSubset = new MyReadFilter($this->config); // range($this->config['range_start'], $this->$config['range_end'])
 

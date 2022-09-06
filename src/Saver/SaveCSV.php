@@ -2,6 +2,7 @@
 
 namespace excel2any\Saver;
 
+use excel2any\Exception\InvalidArgumentException;
 use excel2any\Exception\RuntimeException;
 
 Class SaveCSV implements SaverInterface{
@@ -9,9 +10,14 @@ Class SaveCSV implements SaverInterface{
     /**
      * @inheritDoc
      */
-    public function save(String $data,String $format, String $filename)
+    public function save(String $data, String $filename)
     {
-        if($format == "csv"){//@TODO bad practise here
+            if(gettype($data) != "string"){
+                throw new InvalidArgumentException("Argument must be string");
+            }
+            if(gettype($data) != "string"){
+                throw new InvalidArgumentException("Argument must be string");
+            }
             //add lines
             $data = str_replace("","\n",$data);
             $filename = $filename.".csv";//TODO improvement
@@ -19,9 +25,8 @@ Class SaveCSV implements SaverInterface{
             $result = fwrite($fh,$data);
             if($result == FALSE){
                 throw new RuntimeException("Error write file");
+            }else{
+                return true;
             }
-        }else{
-            throw new RuntimeException("Format Not Supported Yet");
-        }
     }
 }

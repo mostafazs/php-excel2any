@@ -28,7 +28,6 @@ class MyReadFilter implements IReadFilter
     {
         $this->startRow = $config['startRow'];
         $this->endRow = $config['endRow'];
-        $this->columns = range($config['range_start'],$config['range_end']);//TODO maybe remove?
         $this->inputFileType = $config['inputFileType'];
         $this->inputFileName = $config['inputFileName'];
         $this->sheetname = $config['sheetname'];

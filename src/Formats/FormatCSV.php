@@ -4,6 +4,7 @@
 namespace excel2any\Formats;
 
 
+use excel2any\Exception\InvalidArgumentException;
 use excel2any\Exception\RuntimeException;
 
 class FormatCSV implements FormatInterface
@@ -27,6 +28,9 @@ class FormatCSV implements FormatInterface
      * @inheritDoc
      */
     function Format(array $data){
+        if(gettype($data) != "array"){
+            throw new InvalidArgumentException("Argument must be array");
+        }
         $delimiter = ",";$enclosure = '"';$escapeChar = "\\";
         $handle = fopen('php://temp,', 'w+');
         if (!is_array($data)) {

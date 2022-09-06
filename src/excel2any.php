@@ -2,17 +2,36 @@
 
 namespace excel2any;
 
+use excel2any\Exception\InvalidArgumentException;
 use excel2any\Saver\SaveCSV;
+use excel2any\Saver\SaverInterface;
 
-class excel2any implements ConvertInterface {
+class excel2any {
 
+
+    public $save_format;
+    public function convert()
+    {
+        return $this;
+    }
 
     /**
-     * @inheritDoc
+     * @param SaverInterface $saver;
+     * @return $this
      */
-    public function convert($data,$config)
+    public function save(SaverInterface $saver,$data,$filename)
     {
-        $save = new SaveCSV();
-        $save->save($data,"csv",$config['inputFileName']);
+        if( ($saver instanceof SaverInterface) == false ){
+            throw new InvalidArgumentException("Argument must be of type SaverInterface");
+        }
+        if(gettype($data) != "string"){
+            throw new InvalidArgumentException("Argument data must be string");
+        }
+        if(gettype($filename) != "string"){
+            throw new InvalidArgumentException("Argument filename must be string");
+        }
+        $this->save_format = $saver;
+        $r = $saver->save($data,$filename);
+        return $r;
     }
 }
