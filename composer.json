@@ -2,7 +2,7 @@
     "name": "mostafazs/php-excel2any",
     "type": "library",
     "description": "Convert Excel to CSV",
-    "keywords": ["dev", "excel", "csv", "convert","converter"],
+    "keywords": ["excel", "csv", "convert","converter"],
     "homepage": "https://github.com/mostafazs/php-excel2any",
     "license": "MIT",
     "readme": "./README.md",
