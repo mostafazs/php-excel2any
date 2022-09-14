@@ -37,7 +37,7 @@ $config = [
     "range_end"=>"AM",//Column end to
 ];
 
-$excel2any = new excel2any();
+$excel = new excel2any();
 //Read excel file
 $excel_read = new RealRead($config);
 $readed = $excel_read->Read();
