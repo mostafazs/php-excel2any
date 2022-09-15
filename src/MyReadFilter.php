@@ -22,7 +22,7 @@ class MyReadFilter implements IReadFilter
 
     private $range_end = "D";
 
-    private $method = "1"; //@TODO future 1=use phpspreadsheet 2= user other
+    //private $method = "1"; //@TODO future 1=use phpspreadsheet 2= user other
 
     public function __construct($config) // $startRow, $endRow, $columns
     {
@@ -33,7 +33,7 @@ class MyReadFilter implements IReadFilter
         $this->sheetname = $config['sheetname'];
         $this->range_start = $config['range_start'];
         $this->range_end = $config['range_end'];
-        $this->method = $config['method'];
+        //$this->method = $config['method'];
     }
 
     public function readCell($columnAddress, $row, $worksheetName = '')
