@@ -20,9 +20,11 @@ Class SaveCSV implements SaverInterface{
             }
             //add lines
             $data = str_replace("","\n",$data);
+            $output  = "\xEF\xBB\xBF";
+            $output .= $data;
             $filename = $filename.".csv";//TODO improvement
             $fh = fopen($filename,"w");//TODO improvement catch bool(resource) exception
-            $result = fwrite($fh,$data);
+            $result = fwrite($fh,$output);
             if($result == FALSE){
                 throw new RuntimeException("Error write file");
             }else{
