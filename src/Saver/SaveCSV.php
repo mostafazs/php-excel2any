@@ -22,7 +22,9 @@ Class SaveCSV implements SaverInterface{
             $data = str_replace("","\n",$data);
             $output  = "\xEF\xBB\xBF";
             $output .= $data;
-            $filename = $filename.".csv";//TODO improvement
+            $filename = explode(".",$filename);
+            $filename = $filename[0];//@TODO better maybe?
+            $filename = $filename.".csv";
             $fh = fopen($filename,"w");
             if($fh!=true){
                 throw new RuntimeException("File open exception");
