@@ -66,8 +66,8 @@ class FormatCSV implements FormatInterface
         $value = stream_get_contents($handle);
         fclose($handle);
 
+
+        $value = str_replace("","\n",$value);
         return $value;
-        //replace space with new line
-        //return str_replace("","\n",$value);//@TODO we can replace here
     }
 }

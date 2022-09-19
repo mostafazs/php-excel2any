@@ -18,8 +18,6 @@ Class SaveCSV implements SaverInterface{
             if(gettype($data) != "string"){
                 throw new InvalidArgumentException("Argument must be string");
             }
-            //add lines
-            $data = str_replace("","\n",$data);
             $output  = "\xEF\xBB\xBF";
             $output .= $data;
             $filename = explode(".",$filename);
