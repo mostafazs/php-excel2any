@@ -72,6 +72,6 @@ Reward me with a cup of tea 🍵
 
 Send me as much as a cup of tea worth in your country, so I'll have the energy to maintain this package.
 
-    Ethereum: 0x2F5BFrEc184F9F0E9498Fb0B58C800db4007D154
+    Ethereum: 0x311B3d573CC839f79CB48D01b67eA09CCfA5aC48
 	
-[![Paypal](https://localhost/image.png)](https://paypal.com/mostafazs)
+[![Paypal](https://cdn.iconscout.com/icon/free/png-256/paypal-54-675727.png)](https://paypal.com/mostafazs)
