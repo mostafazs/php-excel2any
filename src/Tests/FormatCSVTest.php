@@ -13,6 +13,12 @@ final class FormatCSVTest extends TestCase
 		$this->assertEquals($lines[1],"1,2");
 	}
 
+	public function testFake()
+	{
+		$a = "1";
+		$this->assertEquals("1",$a);
+	}
+
 	public function createArray()
 	{
 		return array("first"=>1,"second"=>2);

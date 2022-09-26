@@ -58,7 +58,7 @@ if($result){
 [Issue](https://github.com/mostafazs/php-excel2any/issues)
 
 # Test
-
+`> phpunit tests`
 
 # License
 MIT
