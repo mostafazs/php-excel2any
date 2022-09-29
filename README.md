@@ -64,7 +64,7 @@ if($result){
 MIT
 
 # TODO 
-Write test
+~~Write test~~
 
 # Donation
 
