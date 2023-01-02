@@ -69,6 +69,7 @@ Convert excel 2 json
 Convert excel 2 ?? seperted values
 Convert excel 2 ics
 Convert excel 2 xml
+Convert excel 2 vcf
 
 # Donation
 
